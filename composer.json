@@ -1,6 +1,7 @@
 {
     "name": "issetbv/push-notification-bundle",
     "description": "",
+    "license": "MIT",
     "homepage": "http://www.isset.nl",
     "authors": [
         {
