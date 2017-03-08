@@ -1,5 +1,5 @@
 {
-    "name": "IssetBV/PushNotificationBundle",
+    "name": "issetbv/push-notification-bundle",
     "description": "",
     "homepage": "http://www.isset.nl",
     "authors": [
@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=7.0",
-        "issetbv/pushnotification": "^1.0"
+        "issetbv/push-notification": "^1.0"
     },
     "autoload": {
         "psr-4": {
