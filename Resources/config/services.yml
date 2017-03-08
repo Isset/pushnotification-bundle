@@ -1,0 +1,7 @@
+parameters:
+    isset_bv_push_notification.center.logger.service: logger
+services:
+    isset_bv_push_notification.center:
+        class: IssetBV\PushNotification\NotificationCenter
+        calls:
+            - [setLogger, ["@=service(parameter('isset_bv_push_notification.center.logger.service'))"]]

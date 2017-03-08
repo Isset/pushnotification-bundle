@@ -1,0 +1,4 @@
+services:
+    isset_bv_push_notification.apple.connection.handler:
+        class: IssetBV\PushNotification\Core\Connection\ConnectionHandlerImpl
+

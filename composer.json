@@ -1,0 +1,20 @@
+{
+    "name": "IssetBV/PushNotificationBundle",
+    "description": "",
+    "homepage": "http://www.isset.nl",
+    "authors": [
+        {
+            "name": "Felix Balfoort",
+            "email": "felix@isset.nl"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "issetbv/pushnotification": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "IssetBV\\PushNotificationBundle\\": ""
+        }
+    }
+}
