@@ -15,13 +15,13 @@ isset_bv_push_notification:
         #connection_handler: connection handler for this notifier
         connections:
             live:
-                key_location: path_to_key
-                key_password_phrase: password_phrase
+                key_location: <path_to_key>
+                key_password_phrase: <password_phrase>
                 default: true
     android:
         connections:
             live:
-                api_key: 'AIzaSyCb2huVrZ-pwGBZrSdMNitA6r6fHOMTOrs'
+                api_key: <api-key>
                 default: true
     windows:
         connections:
@@ -39,8 +39,9 @@ isset_bv_push_notification.center.logger.service: logger
 ### Example apple message
 ````php
 <?php
+$deviceToken = ''; //devicetoken
 $center = $this->get('isset_bv_push_notification.center');
-$message = new AppleMessageAps('d2ef514a2f7e45b0aff20897fae011bda0b52ca8c6e0dd5b0f1e78705331155c');
+$message = new AppleMessageAps($deviceToken);
 $message->getAps()->setAlert('Test apple');
 $envelope = $center->queue($message);
 $center->flushQueue();
@@ -49,8 +50,9 @@ echo $envelope->getState();
 ### Example android message
 ````php
 <?php
+$deviceToken = ''; //devicetoken
 $center = $this->get('isset_bv_push_notification.center');
-$message = new AndroidMessage('d9b55sAPIb0:APA91bFVl03GMhOKXCLyJ3i1PR3BMW7QGOC579DV6W-89fBHj5-w3k_RoTmxCeDtIBIeV7aOKt3xwHH8zbGvSnLEEd6ymb-fupy-ZFVJ89804aBxEyvoMee0BSVGom9pIgfUVMeVeBVh');
+$message = new AndroidMessage($deviceToken);
 $message->addToPayload('notification', ['title' => 'Test android']);
 $envelope = $center->queue($message);
 $center->flushQueue();
