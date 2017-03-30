@@ -4,7 +4,7 @@ Bundle for sending push notifications to apple/android/windows
 ## Install:
 ### Composer:
 ````bash
-composer require issetbv/pushnotificationbundle
+composer require issetbv/push-notification-bundle
 ````
 ### config
 To send messages add connections to the isset_bv_push_notification config
