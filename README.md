@@ -6,6 +6,10 @@ Bundle for sending push notifications to apple/android/windows
 ````bash
 composer require issetbv/push-notification-bundle
 ````
+### AppKernel.php
+````php
+$bundles[] = new IssetBV\PushNotificationBundle\IssetBVPushNotificationBundle();
+````
 ### config
 To send messages add connections to the isset_bv_push_notification config
 ````yaml
