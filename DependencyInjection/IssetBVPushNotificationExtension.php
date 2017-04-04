@@ -73,8 +73,8 @@ class IssetBVPushNotificationExtension extends Extension
         $definition->addTag('isset_bv_push_notification.notifier');
         foreach ($data['connections'] as $type => $connection) {
             $definition = $container->register('isset_bv_push_notification.apple.connection.' . $type, AppleConnection::class);
-            $definition->addArgument($connection['url']);
             $definition->addArgument($type);
+            $definition->addArgument($connection['url']);
             $definition->addArgument($connection['key_location']);
             $definition->addArgument($connection['key_password_phrase'] ?? null);
             $definition->addArgument($connection['default']);
